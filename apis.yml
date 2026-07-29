@@ -1,19 +1,50 @@
 aid: kaavio
 name: Kaavio
-description: Kaavio is a company surfaced as a portfolio company of techstars and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: Kaavio is an AI-powered product content platform for B2B distributors and manufacturers.
+  It sources product data from supplier submissions, PDFs, spec sheets, internal systems (PIM, DAM, ERP)
+  and the web, validates it with conflict detection and confidence scoring, generates market-ready
+  content (structured attributes, SEO descriptions, FAQs, comparisons, substitutes), and deploys it to
+  destination systems such as PIMs, e-commerce platforms, and channels. The platform handles catalogs
+  ranging from 20,000 to more than a million SKUs and claims a 90% reduction in the time and effort to
+  get market-ready SKU content online. Founded by Derek Gregg and Sam Bobb, based in San Francisco, and
+  backed by Baukunst, Techstars, and Looking Glass Capital ($2.9M pre-seed).
 url: https://raw.githubusercontent.com/api-evangelist/kaavio/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - techstars
+- baukunst
+- looking-glass-capital
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://framerusercontent.com/assets/fokZBfWqKr0JvI796Gdtzdh7Cw.png
 tags:
 - Company
+- Product Content
+- Product Data
+- Product Information Management
+- PIM
+- Catalog Management
+- B2B Distribution
+- Manufacturing
+- E-commerce
+- Artificial Intelligence
+- Content Generation
+- Data Enrichment
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -22,4 +53,20 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://kaavio.ai/
+  url: https://www.kaavio.ai/
+- type: Product
+  url: https://www.kaavio.ai/product
+- type: Blog
+  url: https://www.kaavio.ai/resources
+- type: PrivacyPolicy
+  url: https://www.kaavio.ai/privacy
+- type: SignUp
+  name: Book a Demo
+  url: https://meetings.hubspot.com/derek507?uuid=27f4373f-83f4-4c3c-9100-7eb4bd647157
+- type: DomainSecurity
+  url: security/kaavio-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
