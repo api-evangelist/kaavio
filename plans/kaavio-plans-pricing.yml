@@ -1,0 +1,23 @@
+generated: '2026-08-14'
+method: searched
+source: https://www.kaavio.ai/
+plan_count: 0
+currency: null
+note: >-
+  Kaavio publishes no pricing at all. The complete site, per its own sitemap at
+  https://www.kaavio.ai/sitemap.xml, is five pages — home, /product, /vision,
+  /resources and /privacy — plus nine blog posts. There is no /pricing page
+  (probed, 404) and no plan, tier, quota or unit price is stated anywhere on the
+  site. Every commercial call-to-action ("Get a demo", "See it now") routes to a
+  HubSpot meeting booker. This is a sales-led enterprise motion with no published
+  price list, recorded here as a measured zero rather than omitted.
+sales_motion: demo-request
+contact: https://meetings.hubspot.com/derek507?uuid=27f4373f-83f4-4c3c-9100-7eb4bd647157
+plans: []
+evidence:
+- url: https://www.kaavio.ai/pricing
+  status: 404
+- url: https://www.kaavio.ai/sitemap.xml
+  status: 200
+- url: https://www.kaavio.ai/product
+  status: 200

@@ -1,0 +1,23 @@
+generated: '2026-08-14'
+method: searched
+source: https://www.kaavio.ai/
+limit_count: 0
+note: >-
+  No rate limits are documented because Kaavio publishes no API and no developer
+  documentation of any kind. Contract discovery probed every Kaavio-controlled
+  host for a spec or a reference (see well-known/kaavio-well-known.yml and the
+  x-coverage block in apis.yml) and found none. The only HTTP API surface reached
+  is the private backend of the customer application at app.kaavio.ai/api/v1,
+  which answers unauthenticated requests with 403 {"error":"Forbidden"} and
+  publishes no limits, no headers and no reference. Recorded as a measured zero,
+  not an omission.
+headers: []
+limits: []
+evidence:
+- url: https://app.kaavio.ai/api/v1
+  status: 403
+- url: https://www.kaavio.ai/docs
+  status: 404
+- url: https://developer.kaavio.ai/
+  status: 0
+  note: DNS does not resolve
