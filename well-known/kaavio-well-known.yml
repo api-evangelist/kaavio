@@ -1,13 +1,11 @@
 generated: '2026-08-14'
 method: probed
 source: live GET of /.well-known/* on every Kaavio-controlled host
-note: >-
-  Every probed path returned 404 on every host. This file records a measured
-  ABSENCE, not a presence: no WellKnown or SecurityTxt pointer is wired into
-  apis.yml, because Kaavio serves no /.well-known/ document. The marketing site
-  (www.kaavio.ai) is a Framer-hosted site whose 404 handler answers with an HTML
-  body; those responses are recorded as 404 misses. The customer application
-  (app.kaavio.ai) answers /.well-known/* with a text/plain 404.
+note: 'Every probed path returned 404 on every host. This file records a measured ABSENCE, not a presence:
+  no WellKnown or SecurityTxt pointer is wired into apis.yml, because Kaavio serves no /.well-known/ document.
+  The marketing site (www.kaavio.ai) is a Framer-hosted site whose 404 handler answers with an HTML body;
+  those responses are recorded as 404 misses. The customer application (app.kaavio.ai) answers /.well-known/*
+  with a text/plain 404.'
 hosts_probed:
 - www.kaavio.ai
 - kaavio.ai
@@ -19,58 +17,49 @@ hosts_unresolvable:
 - developers.kaavio.ai
 - portal.kaavio.ai
 - mcp.kaavio.ai
-documents:
-- host: https://www.kaavio.ai
-  path: /.well-known/security.txt
-  status: 404
-- host: https://www.kaavio.ai
-  path: /.well-known/openid-configuration
-  status: 404
-- host: https://www.kaavio.ai
-  path: /.well-known/oauth-authorization-server
-  status: 404
-- host: https://www.kaavio.ai
-  path: /.well-known/oauth-protected-resource
-  status: 404
-- host: https://www.kaavio.ai
-  path: /.well-known/api-catalog
-  status: 404
-- host: https://www.kaavio.ai
-  path: /.well-known/ai-plugin.json
-  status: 404
-- host: https://www.kaavio.ai
-  path: /.well-known/agent-card.json
-  status: 404
-- host: https://www.kaavio.ai
-  path: /.well-known/agent.json
-  status: 404
-- host: https://app.kaavio.ai
-  path: /.well-known/security.txt
-  status: 404
-- host: https://app.kaavio.ai
-  path: /.well-known/openid-configuration
-  status: 404
-- host: https://app.kaavio.ai
-  path: /.well-known/oauth-authorization-server
-  status: 404
-- host: https://app.kaavio.ai
-  path: /.well-known/oauth-protected-resource
-  status: 404
-- host: https://app.kaavio.ai
-  path: /.well-known/api-catalog
-  status: 404
-- host: https://app.kaavio.ai
-  path: /.well-known/ai-plugin.json
-  status: 404
-- host: https://app.kaavio.ai
-  path: /.well-known/agent-card.json
-  status: 404
-- host: https://app.kaavio.ai
-  path: /.well-known/agent.json
-  status: 404
 summary:
   paths_probed: 16
   documents_found: 0
   security_txt: false
   agent_card: false
   api_catalog: false
+hosts:
+- host: ''
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
